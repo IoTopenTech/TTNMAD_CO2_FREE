@@ -21,6 +21,6 @@ A continuación se detallan los elementos necesario para constuir el dispositivo
 | Componente | Ejemplo de opción de compra | Precio aproximado |
 |---|---|---|
 |   |   |   |
-|   |   |   |
+|Sensor SCD30|https://www.digikey.es/product-detail/es/sensirion-ag/SCD30/1649-1098-ND/8445334|30-50€|
 |   |   |   |
 
