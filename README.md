@@ -33,4 +33,4 @@ Para su construcción sólo se necesita un soldador de electrónica tipo lápiz 
 
 El tiempo aproximado para construirlo es 1 hora.
 
-Adicionalmente hemos diseñado una carcasa 3D que está disponible en 
+Adicionalmente hemos diseñado una carcasa 3D que está disponible en https://www.thingiverse.com/thing:4637457
