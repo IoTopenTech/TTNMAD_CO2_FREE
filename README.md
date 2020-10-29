@@ -12,7 +12,7 @@ Afortunadamente la concentración de CO2 puede medirse fácilmente y con precisi
 
 Desde la asociación sin ánimo de lucro IoT open Tech nos pusimos manos a la obra para desarrollar un medidor de CO2 DIY fiable, económico y sencillo de construir.
 
-El resultado ha sido TTNMAD_CO2_FREE, que es un dispositivo basado en el microcontrolador ESP8266 y el sensor SCD30, que muestra la concentración de CO2 (además de la temperatura y la humedad) en una pantalla OLED, y utiliza un LED tricolor para indicar la necesidad de ventilar cuando la concentración de CO2 supera las 1000 ppm.
+El resultado ha sido TTNMAD_CO2_FREE, que es un dispositivo basado en el microcontrolador ESP8266 y el sensor SCD30, que muestra la concentración de CO2 (además de la temperatura y la humedad) en una pantalla OLED, y utiliza un LED con 3 colores para indicar la necesidad de ventilar cuando la concentración de CO2 supera las 1000 ppm.
 
 Además, TTNMAD_CO2_FREE puede conectarse a través de WiFi a la plataforma myIoT, en la que se representan los datos y el usuario puede configurar alarmas por mail y Telegram, entre otras.
 
@@ -35,4 +35,5 @@ El tiempo aproximado para construirlo es 1 hora.
 
 Adicionalmente hemos diseñado una carcasa 3D que está disponible en https://www.thingiverse.com/thing:4637457
 
-![Carcasa para TTNMAD_CO2_FREE] (/media/carcasa3d_ttnmad_co2_free.jpg)
+![Carcasa para TTNMAD_CO2_FREE](/media/carcasa3d_ttnmad_co2_free.jpg "Carcasa para TTNMAD_CO2_FREE")
+
