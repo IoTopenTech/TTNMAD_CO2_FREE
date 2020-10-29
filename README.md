@@ -16,7 +16,7 @@ El resultado ha sido TTNMAD_CO2_FREE, que es un dispositivo basado en el microco
 
 Además, TTNMAD_CO2_FREE puede conectarse a través de WiFi a la plataforma myIoT, en la que se representan los datos y el usuario puede configurar alarmas por mail y Telegram, entre otras.
 
-A continuación se detallan los elementos necesario para constuir el dispositivo (cuyo precio total puede variar entre los 55€ y los 70€), y en este mismo repositorio está disponible el programa.
+A continuación se detallan los elementos necesario para constuir el dispositivo (cuyo precio total puede variar entre los 55€ y los 70€ incluyendo gastos de envío e impuestos), y en este mismo repositorio está disponible el programa.
 
 | Componente | Ejemplo de opción de compra | Precio aproximado |
 |---|---|---|
@@ -28,3 +28,9 @@ A continuación se detallan los elementos necesario para constuir el dispositivo
 |LED 5mm cátodo común bicolor rojo/verde difuso|https://es.aliexpress.com/item/32974981818.html|0.05€|
 |Resistencia 100ohm 1/4W|https://es.aliexpress.com/item/32847096736.html|0.01€|
 |Resistencia 10ohm 1/4W|https://es.aliexpress.com/item/32847096736.html|0.01€|
+
+Para su construcción sólo se necesita un soldador de electrónica tipo lápiz y estaño (preferiblemente sin plomo para evitar su toxicidad).
+
+El tiempo aproximado para construirlo es 1 hora.
+
+Adicionalmente hemos diseñado una carcasa 3D que está disponible en 
