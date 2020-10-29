@@ -34,3 +34,5 @@ Para su construcción sólo se necesita un soldador de electrónica tipo lápiz 
 El tiempo aproximado para construirlo es 1 hora.
 
 Adicionalmente hemos diseñado una carcasa 3D que está disponible en https://www.thingiverse.com/thing:4637457
+
+![Carcasa para TTNMAD_CO2_FREE] (/media/carcasa3d_ttnmad_co2_free.jpg)
