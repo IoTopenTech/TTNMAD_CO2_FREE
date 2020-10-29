@@ -14,7 +14,15 @@ Desde la asociación sin ánimo de lucro IoT open Tech nos pusimos manos a la ob
 
 El resultado ha sido TTNMAD_CO2_FREE, que es un dispositivo basado en el microcontrolador ESP8266 y el sensor SCD30, que muestra la concentración de CO2 (además de la temperatura y la humedad) en una pantalla OLED, y utiliza un LED con 3 colores para indicar la necesidad de ventilar cuando la concentración de CO2 supera las 1000 ppm.
 
+![TTNMAD_CO2_FREE](/media/photo_2020-10-29_13-05-56.jpg "TTNMAD_CO2_FREE")
+
 Además, TTNMAD_CO2_FREE puede conectarse a través de WiFi a la plataforma myIoT, en la que se representan los datos y el usuario puede configurar alarmas por mail y Telegram, entre otras.
+
+![TTNMAD_CO2_FREE representado en myIoT](/media/myIoT_TTNMAD_CO2_FREE.jpg "TTNMAD_CO2_FREE representado en myIoT")
+
+En el siguiente vídeo se describe brevemente el proyecto.
+
+[![TTNMAD_CO2_FREE](https://img.youtube.com/vi/RzwtDpLR0ds/0.jpg)](https://www.youtube.com/watch?v=RzwtDpLR0ds)
 
 A continuación se detallan los elementos necesario para constuir el dispositivo (cuyo precio total puede variar entre los 55€ y los 70€ incluyendo gastos de envío e impuestos), y en este mismo repositorio está disponible el programa.
 
