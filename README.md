@@ -31,7 +31,7 @@ A continuación se detallan los elementos necesario para constuir el dispositivo
 |Wemos D1 mini|https://es.aliexpress.com/item/4001291931302.html|2€|
 |Sensor SCD30|https://www.digikey.es/product-detail/es/sensirion-ag/SCD30/1649-1098-ND/8445334|30-50€|
 |Doble zócalo para Wemos D1|https://es.aliexpress.com/item/1680869855.html|0.5€|
-|Pantala OLED para Wemos D1|https://es.aliexpress.com/item/32865961001.html|1.5€|
+|Pantala OLED para Wemos D1|https://es.aliexpress.com/item/32865961001.html|2€|
 |PCB prototipado para Wemos D1|https://es.aliexpress.com/item/32627711647.html|0.5€|
 |LED 5mm cátodo común bicolor rojo/verde difuso|https://es.aliexpress.com/item/32974981818.html|0.05€|
 |Resistencia 100ohm 1/4W|https://es.aliexpress.com/item/32847096736.html|0.01€|
