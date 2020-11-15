@@ -11,9 +11,9 @@ const char wifiInitialApPassword[] = "educamadrid";
 #define STRING_LEN 128
 
 // -- Configuration specific key. The value should be modified if config structure was changed.
-#define CONFIG_VERSION "003"
+#define CONFIG_VERSION "001"
 
-char thingsboardServer[] = "tb.iotopentech.io";
+char thingsboardServer[] = "my.iotopentech.io";
 
 // -- Status indicator pin.
 //      First it will light up (kept LOW), on Wifi connection it will blink,
@@ -188,15 +188,17 @@ unsigned char cancel_icon16x16[] =
   0b00111000, 0b00001110, //   ###       ###
   0b00000000, 0b00000000, //
 };
+#define ledRojo 16
+#define ledVerde 0
 void setup()
 {
   Serial.begin(115200);
   Serial.println();
   Serial.println("Starting up...");
 
-  pinMode(12, OUTPUT);//VERDE
-  pinMode(13, OUTPUT);//ROJO
-  pinMode(14, OUTPUT);//AZUL
+  pinMode(ledVerde, OUTPUT);//VERDE
+  pinMode(ledRojo, OUTPUT);//ROJO
+
 
   //iotWebConf.addParameter(&mqttServerParam);
   iotWebConf.addParameter(&mqttUserNameParam);
@@ -234,32 +236,32 @@ void setup()
   display.clearDisplay();
   display.drawBitmap(8, 1,  educamadrid_bits, 48, 45, 1);
   display.display();
-  digitalWrite(12, HIGH);
-  digitalWrite(13, LOW);
-  digitalWrite(14, LOW);
+  digitalWrite(ledVerde, HIGH);
+  digitalWrite(ledRojo, LOW);
+
   delay(1000);
-  analogWrite(12, 220);
-  digitalWrite(13, HIGH);
-  digitalWrite(14, LOW);
+  analogWrite(ledVerde, 220);
+  digitalWrite(ledRojo, HIGH);
+
   delay(1000);
-  digitalWrite(12, LOW);
-  digitalWrite(13, HIGH);
-  digitalWrite(14, LOW);
+  digitalWrite(ledVerde, LOW);
+  digitalWrite(ledRojo, HIGH);
+
   delay(1000);
   display.clearDisplay();
   display.drawBitmap(7, 0,  crif_bits, 50, 48, 1);
   display.display();
-  digitalWrite(12, HIGH);
-  digitalWrite(13, LOW);
-  digitalWrite(14, LOW);
+  digitalWrite(ledVerde, HIGH);
+  digitalWrite(ledRojo, LOW);
+
   delay(1000);
-  analogWrite(12, 220);
-  digitalWrite(13, HIGH);
-  digitalWrite(14, LOW);
+  analogWrite(ledVerde, 220);
+  digitalWrite(ledRojo, HIGH);
+
   delay(1000);
-  digitalWrite(12, LOW);
-  digitalWrite(13, HIGH);
-  digitalWrite(14, LOW);
+  digitalWrite(ledVerde, LOW);
+  digitalWrite(ledRojo, HIGH);
+
   delay(1000);
   // text display tests
   display.setTextSize(1);
@@ -328,27 +330,27 @@ void loop()
     display.display();
   }
   if (co2 < 1000) {
-    digitalWrite(12, HIGH);
-    digitalWrite(13, LOW);
-    digitalWrite(14, LOW);
+    digitalWrite(ledVerde, HIGH);
+    digitalWrite(ledRojo, LOW);
+
 
   } else if (co2 < 2000) {
     if (parpadeo) {
-      analogWrite(12, 220);
-      digitalWrite(13, HIGH);
-      digitalWrite(14, LOW);
+      analogWrite(ledVerde, 220);
+      digitalWrite(ledRojo, HIGH);
+      
     } else {
-      digitalWrite(12, LOW);
-      digitalWrite(13, LOW);
-      digitalWrite(14, LOW);
+      digitalWrite(ledVerde, LOW);
+      digitalWrite(ledRojo, LOW);
+      
     }
     parpadeo = !parpadeo;
     delay(500);
   } else {
 
-    digitalWrite(12, LOW);
-    digitalWrite(13, HIGH);
-    digitalWrite(14, LOW);
+    digitalWrite(ledVerde, LOW);
+    digitalWrite(ledRojo, HIGH);
+
   }
 
 
@@ -375,12 +377,12 @@ void handleRoot()
     return;
   }
   String s = "<!DOCTYPE html><html lang=\"en\"><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=no\"/>";
-  s += "<title>IotWebConf 06 MQTT App</title></head><body>MQTT App demo";
+  s += "<title>TTNMAD_CO2_FREE</title></head><body>Datos de conexi&oacute;nn";
   s += "<ul>";
   s += "<li>MQTT server: ";
-  s += "tb.iotopentech.io";
+  s += "my.iotopentech.io";
   s += "</ul>";
-  s += "Go to <a href='config'>configure page</a> to change values.";
+  s += "Acceder a la <a href='config'>p&aacute;gina de configuraci&oacute;n</a> para cambiar los valores.";
   s += "</body></html>\n";
 
   server.send(200, "text/html", s);
@@ -416,10 +418,16 @@ boolean formValidator()
 void myIoT()
 {
   Serial.println("Enviando datos a myIoT.");
-  tb.sendTelemetryInt("CO2", co2);
-  tb.sendTelemetryFloat("temperatura", temperatura);
-  tb.sendTelemetryFloat("humedad", humedad);
+  Telemetry data[3] = {
+    { "CO2", co2},
+    { "temperatura", temperatura},
+    { "humedad",    humedad }
+  };
 
+  //tb.sendTelemetryInt("CO2", co2);
+  //tb.sendTelemetryFloat("temperatura", temperatura);
+  //tb.sendTelemetryFloat("humedad", humedad);
+  tb.sendTelemetry(data, 3);
 }
 void DeviceInfo()
 {
